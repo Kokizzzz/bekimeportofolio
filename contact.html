@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="de" data-lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#f8f6f3" />
+  <title data-i18n="meta.title_contact">Kontakt – Bekime Pflege</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <link rel="icon" href="favicon.ico" />
+  <script defer src="assets/js/main.js"></script>
+</head>
+<body>
+<header class="site-header">
+  <div class="container header-inner">
+    <a class="brand" href="index.html"><img src="assets/img/logo.svg" alt="Logo"/></a>
+    <nav class="nav" id="mainNav" aria-label="Primary">
+      <button class="nav-toggle" aria-controls="mainNav" aria-expanded="false" id="navToggle">
+        <span class="burger"></span><span class="sr-only">Menu</span>
+      </button>
+      <ul class="nav-list">
+        <li><a href="index.html" data-i18n="nav.home">Start</a></li>
+        <li><a href="services.html" data-i18n="nav.services">Leistungen</a></li>
+        <li><a href="about.html" data-i18n="nav.about">Über mich</a></li>
+        <li><a class="active" href="contact.html" data-i18n="nav.contact">Kontakt</a></li>
+      </ul>
+    </nav>
+    <div class="lang-switch">
+      <button id="langDe" class="lang-btn active">DE</button>
+      <span class="divider">|</span>
+      <button id="langEn" class="lang-btn">EN</button>
+    </div>
+  </div>
+</header>
+
+<main>
+  <section class="page-hero small">
+    <div class="container">
+      <h1 data-i18n="contact.title">Kontakt</h1>
+      <p class="lead" data-i18n="contact.intro">Schreiben Sie mir – ich melde mich zeitnah.</p>
+    </div>
+  </section>
+
+  <section class="contact">
+    <div class="container contact-grid">
+      <!-- FORM -->
+      <form class="contact-form" method="post" action="">
+        <div class="form-row">
+          <label for="name" data-i18n="form.name">Name</label>
+          <input type="text" id="name" name="name" required placeholder="Ihr Name" />
+        </div>
+        <div class="form-row">
+          <label for="email" data-i18n="form.email">E-Mail</label>
+          <input type="email" id="email" name="email" required placeholder="name@mail.com" />
+        </div>
+        <div class="form-row">
+          <label for="message" data-i18n="form.message">Nachricht</label>
+          <textarea id="message" name="message" rows="5" required placeholder="Wie kann ich helfen?"></textarea>
+        </div>
+        <div class="form-row">
+          <button class="btn btn-primary" type="submit" data-i18n="form.submit">Senden</button>
+        </div>
+        <p class="form-note" data-i18n="form.note">Mit dem Absenden stimmen Sie der Verarbeitung Ihrer Angaben zum Zweck der Kontaktaufnahme zu.</p>
+
+        <!-- Inline WhatsApp hint below form (optional) -->
+        <div class="wa-inline-hint">
+          <span data-i18n="contact.wa_prefer_inline">Oder schneller über WhatsApp:</span>
+          <a class="btn btn-whatsapp js-wa"
+             href="https://wa.me/3897xxxxxxx"
+             data-phone="+3897xxxxxxx"
+             target="_blank" rel="noopener" data-i18n="btn.whatsapp">WhatsApp-Chat starten</a>
+        </div>
+      </form>
+
+      <!-- SIDEBAR -->
+      <aside class="contact-aside">
+        <!-- WhatsApp card (primary) -->
+        <div class="wa-card">
+          <div class="wa-header">
+            <svg class="wa-ico" width="22" height="22" viewBox="0 0 32 32" aria-hidden="true">
+              <path d="M19.1 17.6c-.3-.2-1.8-.9-2.1-1s-.5-.2-.8.2-.9 1-1.1 1.2-.4.3-.7.1-1.5-.6-2.8-1.9-1.9-2.4-2.1-2.7 0-.6.2-.8l.6-.7c.2-.3.3-.5.4-.8s0-.6 0-.8c0-.2-.8-2.1-1.1-2.9-.3-.8-.6-.7-.8-.7h-.7c-.2 0-.6.1-.9.4s-1.2 1.2-1.2 2.9 1.2 3.4 1.4 3.6c.2.2 2.4 3.7 5.8 5.2.8.4 1.5.6 2 .8.8.3 1.6.3 2.2.2.7-.1 2-.8 2.3-1.6.3-.8.3-1.5.2-1.6-.2-.1-.3-.2-.6-.3z" fill="currentColor"/>
+              <path d="M27.3 4.7C24.3 1.7 20.3 0 16.1 0 7.6 0 .7 6.9.7 15.4c0 2.7.7 5.3 2 7.6L0 32l9.3-2.4c2.3 1.3 4.8 2 7.4 2h0C25.2 31.6 32 24.7 32 16.1 32 11.9 30.2 7.9 27.3 4.7zm-11.2 24c-2.6 0-5.1-.7-7.3-2l-.5-.3-5.5 1.4 1.5-5.4-.4-.6c-1.2-2-1.8-4.4-1.8-6.8C1.9 7.9 8.4 1.4 16 1.4c3.8 0 7.4 1.5 10.1 4.2s4.2 6.3 4.2 10.1c0 7.6-6.5 14.1-14.2 14.1z" fill="currentColor"/>
+            </svg>
+            <h3 data-i18n="contact.wa_t">WhatsApp</h3>
+          </div>
+          <p class="wa-note" data-i18n="contact.wa_prefer">Am liebsten über WhatsApp – schnell und unkompliziert.</p>
+          <a class="btn btn-whatsapp js-wa"
+             href="https://wa.me/3897xxxxxxx"
+             data-phone="+3897xxxxxxx"
+             target="_blank" rel="noopener" data-i18n="btn.whatsapp">WhatsApp-Chat starten</a>
+          <p class="wa-number">+389 7x xxx xxx</p>
+          <p class="wa-hours" data-i18n="contact.wa_hours">Antwortzeiten: Mo–Fr 9–17 Uhr</p>
+        </div>
+
+        <!-- Other channels -->
+        <h3 data-i18n="contact.aside_t">Schneller Draht</h3>
+        <p><strong data-i18n="contact.phone">Telefon:</strong> +389 7x xxx xxx</p>
+        <p><strong data-i18n="contact.email">E-Mail:</strong> <a href="mailto:bekimelezi@gmail.com">bekimelezi@gmail.com</a></p>
+        <h4 data-i18n="contact.hours_t">Zeiten</h4>
+        <p data-i18n="contact.hours_d">Mo–Fr 9–17 Uhr • Termine nach Vereinbarung</p>
+      </aside>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <p>© <span id="year"></span> <span data-i18n="brand.name">Bekime Pflege</span>. <span data-i18n="brand.rights">Alle Rechte vorbehalten.</span></p>
+    <a href="contact.html" class="footer-cta" data-i18n="footer.cta">Kontakt</a>
+  </div>
+</footer>
+
+<!-- Floating WhatsApp for mobile -->
+<a class="wa-float js-wa"
+   href="https://wa.me/3897xxxxxxx"
+   data-phone="+3897xxxxxxx"
+   target="_blank" rel="noopener" aria-label="WhatsApp">
+  <svg width="22" height="22" viewBox="0 0 32 32" aria-hidden="true"><path d="M19.1 17.6c-.3-.2-1.8-.9-2.1-1s-.5-.2-.8.2-.9 1-1.1 1.2-.4.3-.7.1-1.5-.6-2.8-1.9-1.9-2.4-2.1-2.7 0-.6.2-.8l.6-.7c.2-.3.3-.5.4-.8s0-.6 0-.8c0-.2-.8-2.1-1.1-2.9-.3-.8-.6-.7-.8-.7h-.7c-.2 0-.6.1-.9.4s-1.2 1.2-1.2 2.9 1.2 3.4 1.4 3.6c.2.2 2.4 3.7 5.8 5.2.8.4 1.5.6 2 .8.8.3 1.6.3 2.2.2.7-.1 2-.8 2.3-1.6.3-.8.3-1.5.2-1.6-.2-.1-.3-.2-.6-.3z" fill="currentColor"/><path d="M27.3 4.7C24.3 1.7 20.3 0 16.1 0 7.6 0 .7 6.9.7 15.4c0 2.7.7 5.3 2 7.6L0 32l9.3-2.4c2.3 1.3 4.8 2 7.4 2h0C25.2 31.6 32 24.7 32 16.1 32 11.9 30.2 7.9 27.3 4.7zm-11.2 24c-2.6 0-5.1-.7-7.3-2l-.5-.3-5.5 1.4 1.5-5.4-.4-.6c-1.2-2-1.8-4.4-1.8-6.8C1.9 7.9 8.4 1.4 16 1.4c3.8 0 7.4 1.5 10.1 4.2s4.2 6.3 4.2 10.1c0 7.6-6.5 14.1-14.2 14.1z" fill="currentColor"/></svg>
+  <span data-i18n="btn.whatsapp_short">WhatsApp</span>
+</a>
+
+</body>
+</html>

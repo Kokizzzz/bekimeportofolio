@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="de" data-lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#f8f6f3" />
+  <title data-i18n="meta.title_services">Leistungen – Bekime Pflege</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <link rel="icon" href="favicon.ico" />
+  <script defer src="assets/js/main.js"></script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html"><img src="assets/img/logo.svg" alt="Logo" /></a>
+      <nav class="nav" id="mainNav" aria-label="Primary">
+        <button class="nav-toggle" aria-controls="mainNav" aria-expanded="false" id="navToggle">
+          <span class="burger"></span><span class="sr-only">Menu</span>
+        </button>
+        <ul class="nav-list">
+          <li><a href="index.html" data-i18n="nav.home">Start</a></li>
+          <li><a class="active" href="services.html" data-i18n="nav.services">Leistungen</a></li>
+          <li><a href="about.html" data-i18n="nav.about">Über mich</a></li>
+          <li><a href="contact.html" data-i18n="nav.contact">Kontakt</a></li>
+        </ul>
+      </nav>
+      <div class="lang-switch">
+        <button id="langDe" class="lang-btn active" aria-pressed="true">DE</button>
+        <span class="divider">|</span>
+        <button id="langEn" class="lang-btn" aria-pressed="false">EN</button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="page-hero small">
+      <div class="container">
+        <h1 data-i18n="services.title">Leistungen</h1>
+        <p class="lead" data-i18n="services.intro">Individuelle Unterstützung rund um Schwangerschaft, Geburt und die erste Zeit mit Baby.</p>
+      </div>
+    </section>
+
+    <!-- Services grid -->
+    <section class="services-list">
+      <div class="container grid-3">
+        <article class="service-card"><h3 data-i18n="services.preg_title">Schwangerenbetreuung</h3><p data-i18n="services.preg_desc">Aufklärung, Wohlbefinden, Vorbereitung auf Geburt – entspannter durch die Schwangerschaft.</p></article>
+        <article class="service-card"><h3 data-i18n="services.post_title">Wochenbettpflege</h3><p data-i18n="services.post_desc">Schonung, Rückbildung, Rituale, Schlaf – ich bin an Ihrer Seite in den ersten Wochen.</p></article>
+        <article class="service-card"><h3 data-i18n="services.baby_title">Babypflege & Beruhigung</h3><p data-i18n="services.baby_desc">Sicheres Baden, Wickeln, Tragen, beruhigende Routinen – liebevoll & kompetent.</p></article>
+        <article class="service-card"><h3 data-i18n="services.lact_title">Still-/Ernährungsberatung</h3><p data-i18n="services.lact_desc">Unterstützung beim Stillen oder Fläschchen – bedürfnisorientiert & praktisch.</p></article>
+        <article class="service-card"><h3 data-i18n="services.night_title">Nachtbetreuung</h3><p data-i18n="services.night_desc">Entlastung in der Nacht, damit Sie Kraft sammeln können.</p></article>
+        <article class="service-card"><h3 data-i18n="services.home_title">Hausbesuche</h3><p data-i18n="services.home_desc">Planbare Termine bei Ihnen zuhause in Ihrer Region.</p></article>
+      </div>
+    </section>
+
+
+    <!-- Process -->
+    <section class="process">
+      <div class="container">
+        <h2 data-i18n="process.title">So läuft’s</h2>
+        <div class="steps">
+          <div class="step"><div class="num">1</div><h4 data-i18n="process.s1_t">Kontakt</h4><p data-i18n="process.s1_d">Kurze Anfrage senden – ich melde mich zeitnah.</p></div>
+          <div class="step"><div class="num">2</div><h4 data-i18n="process.s2_t">Erstgespräch</h4><p data-i18n="process.s2_d">30–45 Min. zum Kennenlernen & Bedarf klären.</p></div>
+          <div class="step"><div class="num">3</div><h4 data-i18n="process.s3_t">Plan</h4><p data-i18n="process.s3_d">Individueller Besuchs- & Unterstützungsplan.</p></div>
+          <div class="step"><div class="num">4</div><h4 data-i18n="process.s4_t">Begleitung</h4><p data-i18n="process.s4_d">Hausbesuche, Routinen, beruhigende Rituale.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="testimonials">
+      <div class="container">
+        <h2 data-i18n="testi.title">Stimmen von Eltern</h2>
+        <div class="testi-grid">
+          <div class="testi" data-i18n="testi.1">„Mit Bekime war die erste Woche zuhause so viel entspannter. Besonders die Abendbetreuung hat uns gerettet.“ — Anna & Tim</div>
+          <div class="testi" data-i18n="testi.2">„Sanft, ruhig, kompetent. Ich habe mich gesehen und unterstützt gefühlt.“ — Lea</div>
+          <div class="testi" data-i18n="testi.3">„Tolle Tipps zu Schlaf und Stillen – und immer erreichbar für kurze Fragen.“ — Familie D.</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="faq">
+      <div class="container">
+        <h2 data-i18n="faq.title">Häufige Fragen</h2>
+        <div class="accordion" id="faq">
+          <div class="acc-item">
+            <button class="acc-btn" data-i18n="faq.q1">Kassenleistung oder privat?</button>
+            <div class="acc-content" data-i18n="faq.a1">Die Begleitung ist privat. Auf Wunsch stelle ich eine Rechnung zur Vorlage bei Zusatzversicherungen aus.</div>
+          </div>
+          <div class="acc-item">
+            <button class="acc-btn" data-i18n="faq.q2">Wie funktioniert die Monatsbetreuung?</button>
+            <div class="acc-content" data-i18n="faq.a2">Stundenkontingent pro Monat, monatlich kündbar. Nicht genutzte 1 Stunde kann in den Folgemonat übertragen werden.</div>
+          </div>
+          <div class="acc-item">
+            <button class="acc-btn" data-i18n="faq.q3">Welche Region?</button>
+            <div class="acc-content" data-i18n="faq.a3">Struga + Umgebung. Fahrkosten je nach Entfernung.</div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>© <span id="year"></span> <span data-i18n="brand.name">Bekime Pflege</span>. <span data-i18n="brand.rights">Alle Rechte vorbehalten.</span></p>
+      <a href="contact.html" class="footer-cta" data-i18n="footer.cta">Kontakt</a>
+    </div>
+  </footer>
+</body>
+</html>

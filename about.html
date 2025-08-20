@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="de" data-lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#f8f6f3" />
+  <title data-i18n="meta.title_about">Über mich – Bekime Pflege</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <link rel="icon" href="favicon.ico" />
+  <script defer src="assets/js/main.js"></script>
+</head>
+<body>
+<header class="site-header">
+  <div class="container header-inner">
+    <a class="brand" href="index.html"><img src="assets/img/logo.svg" alt="Logo"/></a>
+    <nav class="nav" id="mainNav" aria-label="Primary">
+      <button class="nav-toggle" aria-controls="mainNav" aria-expanded="false" id="navToggle">
+        <span class="burger"></span><span class="sr-only">Menu</span>
+      </button>
+      <ul class="nav-list">
+        <li><a href="index.html" data-i18n="nav.home">Start</a></li>
+        <li><a href="services.html" data-i18n="nav.services">Leistungen</a></li>
+        <li><a class="active" href="about.html" data-i18n="nav.about">Über mich</a></li>
+        <li><a href="contact.html" data-i18n="nav.contact">Kontakt</a></li>
+      </ul>
+    </nav>
+    <div class="lang-switch">
+      <button id="langDe" class="lang-btn active" aria-pressed="true">DE</button>
+      <span class="divider">|</span>
+      <button id="langEn" class="lang-btn" aria-pressed="false">EN</button>
+    </div>
+  </div>
+</header>
+
+<main>
+  <!-- HERO -->
+  <section class="page-hero small">
+    <div class="container">
+      <h1 data-i18n="about.title">Über mich</h1>
+    </div>
+  </section>
+
+  <!-- INTRO with portrait + statement -->
+  <section class="about-intro">
+    <div class="container about-intro-grid">
+      <figure class="portrait-wrap">
+        <!-- Replace this with a real portrait: 1000x1200 JPG/WEBP recommended -->
+        <!-- e.g. assets/img/bekime.jpg -->
+        <img src="assets/img/WhatsApp Image 2025-08-21 at 01.27.47_9f774f5a.jpg" alt="Bekime Elezi Porträt" class="portrait"/>
+        <figcaption>Bekime Elezi</figcaption>
+      </figure>
+
+      <div class="statement-card pro">
+        <div class="accent-bar" aria-hidden="true"></div>
+
+        <blockquote data-i18n="about.only.lead">
+          Man sagt, dass Essen den Körper, Wissenschaft den Geist und Liebe die Seele nährt.
+        </blockquote>
+
+        <p data-i18n="about.only.p1">
+          Diese Zusammenhänge spielen eine wichtige Rolle bei der Geburt und im weiteren Leben. Daher sind sie mir ein Leitbild.
+        </p>
+
+        <p data-i18n="about.only.p2">
+          Ich bin ausgebildete Hebamme und habe während meiner Ausbildung (Level&nbsp;1) gemeinsam mit Hebammen und Ärzt*innen über 300 Geburten begleitet. In diesem Rahmen konnte ich viel Erfahrung im Umgang mit Geburtskomplikationen sammeln. Selbst bei schwierigen Situationen bleibe ich ruhig – diese Ruhe überträgt sich auf die werdenden Mütter.
+        </p>
+
+        <p data-i18n="about.only.p3">
+          Bereits früh war ich für die tägliche medizinische Grundversorgung sowie für Vorsorge, Geburt und Nachsorge verantwortlich.
+        </p>
+
+        <p data-i18n="about.only.p4">
+          Ich arbeite flexibel, konzentriert, liebevoll und fleißig – zukunftsorientiert und verantwortungsvoll. Mit Herz, mit Blick für das Ganze und mit der Bereitschaft, Verantwortung zu übernehmen. Gleichzeitig bringe ich die nötige emotionale Intelligenz mit, um mich gut in Teams einzufügen und Ihnen in Schwangerschaft und Wochenbett Stabilität zu geben.
+        </p>
+
+        <p data-i18n="about.only.p5">
+          Wenn ich Ihr Interesse geweckt habe, freue ich mich auf Ihre Nachricht.
+        </p>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Soft CTA -->
+  <section class="cta-wide">
+    <div class="container cta-wide-inner">
+      <h3 data-i18n="about.cta_t">Lassen Sie uns sprechen.</h3>
+      <a href="contact.html" class="btn btn-primary" data-i18n="about.cta_btn">Unverbindliches Erstgespräch</a>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <p>© <span id="year"></span> <span data-i18n="brand.name">Bekime Pflege</span>.
+      <span data-i18n="brand.rights">Alle Rechte vorbehalten.</span></p>
+    <a href="contact.html" class="footer-cta" data-i18n="footer.cta">Kontakt</a>
+  </div>
+</footer>
+</body>
+</html>
