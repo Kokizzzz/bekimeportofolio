@@ -1,6 +1,9 @@
-// ===============================
-// Language dictionary (DE default)
-// ===============================
+/* assets/js/main.js */
+'use strict';
+
+/* ===============================
+   Language dictionary (DE default)
+   =============================== */
 const TRANSLATIONS = {
   de: {
     // META / BRAND
@@ -110,10 +113,8 @@ const TRANSLATIONS = {
     'membership.plus_f3': 'Kündbar monatlich',
     'membership.pay_note': 'Zahlung per Rechnung, bar oder Online-Payment (z. B. Stripe) möglich. Ermäßigungen für Alleinerziehende auf Anfrage.',
 
-
-
- 'about.title': 'Über mich',
-
+    // ABOUT (title for hero)
+    'about.title': 'Über mich',
 
     // COMPARISON
     'compare.title': 'Vergleich',
@@ -312,6 +313,9 @@ const TRANSLATIONS = {
     'pricing.night_f3': 'Extendable on request',
     'pricing.note_ext': 'Note: No medical treatment. In case of complications, please contact a doctor or midwife.',
 
+    // About — hero title
+    'about.title': 'About',
+
     // About — improved “only” translation (your text)
     'about.only.lead':'It is said that food nourishes the body, science nourishes the mind and love nourishes the soul.',
     'about.only.p1':'These connections play an important role at birth and throughout life. That is why they are my life guiding principles.',
@@ -340,12 +344,6 @@ const TRANSLATIONS = {
     'form.message':'Message',
     'form.submit':'Send',
     'form.note':'By submitting you agree to the processing of your data for the purpose of contacting you.',
-
-
-
-
-'about.title': 'About',
-
 
     // MEMBERSHIPS
     'memberships.title': 'Bundles & Monthly Care',
@@ -424,9 +422,9 @@ const TRANSLATIONS = {
   }
 };
 
-// ===============================
-// Helpers
-// ===============================
+/* =========================================
+   Helpers
+   ========================================= */
 
 // Build WhatsApp URLs using the current language's prefilled text
 function updateWhatsAppLinks(lang){
@@ -452,13 +450,15 @@ function applyTranslations(lang) {
 
     const tag = el.tagName.toLowerCase();
     if (tag === 'meta') {
-      el.setAttribute('content', dict[key]); // <meta ... data-i18n="meta.description">
+      // <meta ... data-i18n="meta.description">
+      el.setAttribute('content', dict[key]);
     } else if (tag === 'title') {
+      // <title data-i18n="meta.title_about">...</title>
       el.textContent = dict[key];
       document.title = dict[key]; // ensure browser tab updates
     } else {
-      // allow simple inline markup (e.g., <br/>) in some strings
-      if (/[<>&]/.test(dict[key]) || el.hasAttribute('data-i18n-html')) {
+      // allow simple inline markup (opt-in with data-i18n-html, or when string contains markup symbols)
+      if (el.hasAttribute('data-i18n-html') || /[<>&]/.test(dict[key])) {
         el.innerHTML = dict[key];
       } else {
         el.textContent = dict[key];
@@ -488,23 +488,64 @@ function applyTranslations(lang) {
 }
 
 function setupLangSwitch() {
+  // initial apply
   let saved = 'de';
   try { saved = localStorage.getItem('lang') || 'de'; } catch(_) {}
   applyTranslations(saved);
 
+  // direct listeners
   const de = document.getElementById('langDe');
   const en = document.getElementById('langEn');
-  if (de) de.addEventListener('click', () => applyTranslations('de'));
-  if (en) en.addEventListener('click', () => applyTranslations('en'));
+  if (de) de.addEventListener('click', (e)=>{ e.preventDefault(); applyTranslations('de'); });
+  if (en) en.addEventListener('click', (e)=>{ e.preventDefault(); applyTranslations('en'); });
+
+  // event delegation fallback (works even if buttons are re-rendered)
+  document.addEventListener('click', (e)=>{
+    const btnDe = e.target.closest('#langDe');
+    const btnEn = e.target.closest('#langEn');
+    if (btnDe) { e.preventDefault(); applyTranslations('de'); }
+    if (btnEn) { e.preventDefault(); applyTranslations('en'); }
+  });
+
+  // handy console helper: i18n.set('en')
+  window.i18n = {
+    set: (lng)=>applyTranslations(lng),
+    get: ()=> { try { return localStorage.getItem('lang') || 'de'; } catch(_) { return 'de'; } }
+  };
 }
 
 function setupNav() {
   const toggle = document.getElementById('navToggle');
   const list = document.querySelector('.nav-list');
   if (!toggle || !list) return;
+
+  const closeMenu = ()=>{
+    list.classList.remove('show');
+    toggle.setAttribute('aria-expanded','false');
+    document.body.classList.remove('nav-open');
+  };
+
   toggle.addEventListener('click', () => {
     const open = list.classList.toggle('show');
     toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+    document.body.classList.toggle('nav-open', open);
+  });
+
+  // close when clicking a link
+  list.addEventListener('click', (e)=>{
+    if (e.target.closest('a')) closeMenu();
+  });
+
+  // close on outside click
+  document.addEventListener('click', (e)=>{
+    if (!list.classList.contains('show')) return;
+    const inNav = e.target.closest('.nav');
+    if (!inNav) closeMenu();
+  });
+
+  // close on ESC
+  document.addEventListener('keydown', (e)=>{
+    if (e.key === 'Escape') closeMenu();
   });
 }
 
@@ -523,7 +564,9 @@ function setupFAQ() {
   });
 }
 
-// Boot
+/* ===============================
+   Boot
+   =============================== */
 document.addEventListener('DOMContentLoaded', () => {
   setupLangSwitch();
   setupNav();
