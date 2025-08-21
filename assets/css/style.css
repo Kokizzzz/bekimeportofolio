@@ -185,6 +185,18 @@ input:focus,textarea:focus{border-color:var(--brand-dark);box-shadow:0 0 0 4px r
 .made-by .kokizz:hover{transform:translateY(-1px);box-shadow:0 10px 24px rgba(0,0,0,.08)}
 .made-by img{width:20px;height:20px;display:block;border-radius:6px}
 .made-by .kokizz span{font-weight:800;letter-spacing:.2px}
+/* Footer logo sizing */
+.made-by .footer-logo{
+  height: 28px;        /* choose 24–36px to taste */
+  width: auto;
+  max-width: 160px;    /* prevents super-wide logos */
+  object-fit: contain;
+  border-radius: 6px !important; /* override global img radius */
+}
+
+/* If the logo still appears huge, also constrain any image on the right side */
+.footer-right img{ max-height: 28px; width: auto; border-radius: 6px !important; }
+
 
 /* ================ Responsive ================ */
 @media (max-width:1000px){ .steps{grid-template-columns:repeat(2,1fr)} }
