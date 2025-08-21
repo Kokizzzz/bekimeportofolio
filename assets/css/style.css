@@ -158,12 +158,8 @@ input:focus,textarea:focus{border-color:var(--brand-dark);box-shadow:0 0 0 4px r
 .form-note{color:var(--muted);font-size:.95rem}
 
 /* ================ Footer (enhanced with credit/logo) ================ */
-.site-footer{
-  border-top:1px solid #eee;margin-top:20px;background:#fff;
-}
-.footer-inner{
-  display:flex;align-items:center;justify-content:space-between;gap:14px;padding:18px 0;
-}
+.site-footer{border-top:1px solid #eee;margin-top:20px;background:#fff}
+.footer-inner{display:flex;align-items:center;justify-content:space-between;gap:14px;padding:18px 0}
 .footer-left p{margin:0;color:#444}
 .footer-right{display:flex;align-items:center;gap:14px}
 
@@ -173,9 +169,7 @@ input:focus,textarea:focus{border-color:var(--brand-dark);box-shadow:0 0 0 4px r
 }
 .footer-cta:hover{background:#fefefe}
 
-.made-by{
-  display:flex;align-items:center;gap:8px;font-size:.95rem;color:#555
-}
+.made-by{display:flex;align-items:center;gap:8px;font-size:.95rem;color:#555}
 .made-by .kokizz{
   display:inline-flex;align-items:center;gap:8px;
   background:#fff;border:1px solid #eee;border-radius:999px;
@@ -185,18 +179,11 @@ input:focus,textarea:focus{border-color:var(--brand-dark);box-shadow:0 0 0 4px r
 .made-by .kokizz:hover{transform:translateY(-1px);box-shadow:0 10px 24px rgba(0,0,0,.08)}
 .made-by img{width:20px;height:20px;display:block;border-radius:6px}
 .made-by .kokizz span{font-weight:800;letter-spacing:.2px}
+
 /* Footer logo sizing */
 .made-by .footer-logo{
-  height: 28px;        /* choose 24–36px to taste */
-  width: auto;
-  max-width: 160px;    /* prevents super-wide logos */
-  object-fit: contain;
-  border-radius: 6px !important; /* override global img radius */
+  height:28px; width:auto; max-width:160px; object-fit:contain; border-radius:6px !important;
 }
-/* footer base keeps your existing layout */
-.site-footer{border-top:1px solid #eee;margin-top:20px}
-.footer-inner{display:flex;align-items:center;justify-content:space-between;padding:18px 0}
-.footer-left p{margin:0;color:#444}
 
 /* socials */
 .socials{display:flex;gap:10px;align-items:center}
@@ -209,20 +196,36 @@ input:focus,textarea:focus{border-color:var(--brand-dark);box-shadow:0 0 0 4px r
 .social:hover{transform:translateY(-1px);border-color:var(--brand-dark);color:#111}
 .social svg{width:20px;height:20px}
 
-/* If the logo still appears huge, also constrain any image on the right side */
-.footer-right img{ max-height: 28px; width: auto; border-radius: 6px !important; }
-
+/* Also constrain any image in footer-right just in case */
+.footer-right img{ max-height:28px; width:auto; border-radius:6px !important; }
 
 /* ================ Responsive ================ */
 @media (max-width:1000px){ .steps{grid-template-columns:repeat(2,1fr)} }
 
+/* MOBILE: center burger in the header and menu under it */
 @media (max-width:900px){
-  /* show burger, make list a dropdown */
-  .nav-toggle{display:block}
+  /* make header a 3-column grid: brand | burger | lang */
+  .header-inner{
+    display:grid;
+    grid-template-columns:auto 1fr auto;
+    align-items:center;
+  }
+  .brand{justify-self:start}
+  .nav{justify-self:center; position:relative}
+  .lang-switch{justify-self:end}
+
+  .nav-toggle{display:block; margin:0 auto; z-index:1001}
+
+  /* center dropdown under the burger */
   .nav-list{
-    position:absolute;right:0;top:calc(100% + 10px);
-    display:none;flex-direction:column;
-    background:#fff;border:1px solid #eee;border-radius:14px;
+    position:absolute;
+    top:calc(100% + 10px);
+    left:50%;
+    transform:translateX(-50%);
+    display:none;
+    flex-direction:column;
+    background:#fff;
+    border:1px solid #eee;border-radius:14px;
     box-shadow:0 12px 30px rgba(0,0,0,.12);
     min-width:220px;padding:8px;z-index:1000;
   }
@@ -278,13 +281,8 @@ input:focus,textarea:focus{border-color:var(--brand-dark);box-shadow:0 0 0 4px r
 
 /* About: portrait + statement layout */
 .about-intro{padding:16px 0 44px}
-.about-intro-grid{
-  display:grid;grid-template-columns:0.9fr 1.1fr;gap:22px;align-items:start;
-}
-.portrait-wrap{
-  background:#fff;border:1px solid #eee;border-radius:18px;box-shadow:var(--shadow);
-  padding:14px;text-align:center
-}
+.about-intro-grid{display:grid;grid-template-columns:0.9fr 1.1fr;gap:22px;align-items:start}
+.portrait-wrap{background:#fff;border:1px solid #eee;border-radius:18px;box-shadow:var(--shadow);padding:14px;text-align:center}
 .portrait{
   width:100%;height:auto;aspect-ratio:5/6;object-fit:cover;border-radius:14px;
   box-shadow:0 8px 30px rgba(0,0,0,.06)
