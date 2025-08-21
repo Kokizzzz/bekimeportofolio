@@ -4,6 +4,7 @@
   --ring:rgba(0,0,0,.08);
   --shadow:0 8px 24px rgba(20,20,20,.06);
   --radius-lg:16px; --radius-md:12px; --radius-sm:10px;
+  --header-h:64px; /* used for mobile menu top offset */
 }
 
 *{box-sizing:border-box}
@@ -49,7 +50,7 @@ a{color:inherit;text-decoration:none}
 .nav-toggle[aria-expanded="true"] .burger::before{transform:rotate(90deg);top:0}
 .nav-toggle[aria-expanded="true"] .burger::after{opacity:0}
 
-/* Links list */
+/* Links list (desktop) */
 .nav-list{display:flex;gap:18px;list-style:none;margin:0;padding:0}
 .nav-list a{padding:.55rem .8rem;border-radius:12px}
 .nav-list a.active,.nav-list a:hover{background:#fff;box-shadow:0 1px 0 var(--ring)}
@@ -157,58 +158,36 @@ input,textarea{border:1px solid #e3e3e3;border-radius:12px;padding:.75rem;backgr
 input:focus,textarea:focus{border-color:var(--brand-dark);box-shadow:0 0 0 4px rgba(233,182,198,.25)}
 .form-note{color:var(--muted);font-size:.95rem}
 
-/* ================ Footer (enhanced with credit/logo) ================ */
+/* ================ Footer (enhanced) ================ */
 .site-footer{border-top:1px solid #eee;margin-top:20px;background:#fff}
 .footer-inner{display:flex;align-items:center;justify-content:space-between;gap:14px;padding:18px 0}
 .footer-left p{margin:0;color:#444}
 .footer-right{display:flex;align-items:center;gap:14px}
-
-.footer-cta{
-  background:#fff;border:1px solid #eee;border-radius:12px;
-  padding:.55rem .9rem;font-weight:700;box-shadow:0 1px 0 var(--ring)
-}
+.footer-cta{background:#fff;border:1px solid #eee;border-radius:12px;padding:.55rem .9rem;font-weight:700;box-shadow:0 1px 0 var(--ring)}
 .footer-cta:hover{background:#fefefe}
-
 .made-by{display:flex;align-items:center;gap:8px;font-size:.95rem;color:#555}
-.made-by .kokizz{
-  display:inline-flex;align-items:center;gap:8px;
-  background:#fff;border:1px solid #eee;border-radius:999px;
-  padding:.35rem .6rem;box-shadow:var(--shadow);
-  transition:transform .15s ease, box-shadow .2s ease
-}
+.made-by .kokizz{display:inline-flex;align-items:center;gap:8px;background:#fff;border:1px solid #eee;border-radius:999px;padding:.35rem .6rem;box-shadow:var(--shadow);transition:transform .15s ease, box-shadow .2s ease}
 .made-by .kokizz:hover{transform:translateY(-1px);box-shadow:0 10px 24px rgba(0,0,0,.08)}
 .made-by img{width:20px;height:20px;display:block;border-radius:6px}
 .made-by .kokizz span{font-weight:800;letter-spacing:.2px}
-
-/* Footer logo sizing */
-.made-by .footer-logo{
-  height:28px; width:auto; max-width:160px; object-fit:contain; border-radius:6px !important;
-}
-
-/* socials */
+.made-by .footer-logo{height:28px;width:auto;max-width:160px;object-fit:contain;border-radius:6px !important}
 .socials{display:flex;gap:10px;align-items:center}
-.social{
-  display:inline-grid;place-items:center;
-  width:38px;height:38px;border-radius:12px;
-  background:#fff;border:1px solid #eee;box-shadow:var(--shadow);
-  color:#333;transition:.2s ease;
-}
+.social{display:inline-grid;place-items:center;width:38px;height:38px;border-radius:12px;background:#fff;border:1px solid #eee;box-shadow:var(--shadow);color:#333;transition:.2s ease}
 .social:hover{transform:translateY(-1px);border-color:var(--brand-dark);color:#111}
 .social svg{width:20px;height:20px}
-
-/* Also constrain any image in footer-right just in case */
-.footer-right img{ max-height:28px; width:auto; border-radius:6px !important; }
+.footer-right img{max-height:28px;width:auto;border-radius:6px !important}
 
 /* ================ Responsive ================ */
 @media (max-width:1000px){ .steps{grid-template-columns:repeat(2,1fr)} }
 
-/* MOBILE: center burger in the header and menu under it */
+/* MOBILE: burger centered + menu as fixed panel (no clipping) */
 @media (max-width:900px){
-  /* make header a 3-column grid: brand | burger | lang */
+  /* turn header into 3 columns: brand | burger | lang */
   .header-inner{
     display:grid;
     grid-template-columns:auto 1fr auto;
     align-items:center;
+    min-height:var(--header-h);
   }
   .brand{justify-self:start}
   .nav{justify-self:center; position:relative}
@@ -216,21 +195,29 @@ input:focus,textarea:focus{border-color:var(--brand-dark);box-shadow:0 0 0 4px r
 
   .nav-toggle{display:block; margin:0 auto; z-index:1001}
 
-  /* center dropdown under the burger */
+  /* Full-width dropdown anchored below header, centered */
   .nav-list{
-    position:absolute;
-    top:calc(100% + 10px);
+    position:fixed;
     left:50%;
     transform:translateX(-50%);
+    top:calc(env(safe-area-inset-top) + var(--header-h));
+    width:min(94vw, 420px);
+    max-width:420px;
     display:none;
     flex-direction:column;
     background:#fff;
     border:1px solid #eee;border-radius:14px;
-    box-shadow:0 12px 30px rgba(0,0,0,.12);
-    min-width:220px;padding:8px;z-index:1000;
+    box-shadow:0 14px 36px rgba(0,0,0,.14);
+    padding:8px;
+    z-index:1002;
+    max-height:70vh;
+    overflow:auto;
+    -webkit-overflow-scrolling:touch;
+    text-align:center;
+    touch-action:manipulation;
   }
   .nav-list.show{display:flex}
-  .nav-list a{padding:10px 12px;border-radius:10px}
+  .nav-list a{padding:12px 14px;border-radius:10px;font-size:1.05rem}
   .nav-list a:hover{background:#f7f7f7}
 }
 
@@ -269,42 +256,24 @@ input:focus,textarea:focus{border-color:var(--brand-dark);box-shadow:0 0 0 4px r
 
 /* About: single statement */
 .statement{padding:10px 0 40px}
-.statement-card{
-  background:#fff;border:1px solid #eee;border-radius:16px;padding:22px;
-  box-shadow:var(--shadow);max-width:900px;margin:0 auto
-}
-.statement blockquote{
-  font-size:1.15rem;font-weight:600;border-left:4px solid var(--brand);
-  padding:10px 14px;border-radius:12px;background:#fafafa;margin:0 0 12px
-}
+.statement-card{background:#fff;border:1px solid #eee;border-radius:16px;padding:22px;box-shadow:var(--shadow);max-width:900px;margin:0 auto}
+.statement blockquote{font-size:1.15rem;font-weight:600;border-left:4px solid var(--brand);padding:10px 14px;border-radius:12px;background:#fafafa;margin:0 0 12px}
 .signature{margin-top:16px;font-weight:700}
 
 /* About: portrait + statement layout */
 .about-intro{padding:16px 0 44px}
 .about-intro-grid{display:grid;grid-template-columns:0.9fr 1.1fr;gap:22px;align-items:start}
 .portrait-wrap{background:#fff;border:1px solid #eee;border-radius:18px;box-shadow:var(--shadow);padding:14px;text-align:center}
-.portrait{
-  width:100%;height:auto;aspect-ratio:5/6;object-fit:cover;border-radius:14px;
-  box-shadow:0 8px 30px rgba(0,0,0,.06)
-}
+.portrait{width:100%;height:auto;aspect-ratio:5/6;object-fit:cover;border-radius:14px;box-shadow:0 8px 30px rgba(0,0,0,.06)}
 .portrait-wrap figcaption{margin-top:10px;font-weight:700;color:#444}
 
 /* elevated statement card */
-.statement-card.pro{
-  position:relative;background:#fff;border:1px solid #eee;border-radius:18px;
-  padding:22px;box-shadow:var(--shadow)
-}
-.statement-card.pro blockquote{
-  font-size:1.15rem;font-weight:700;background:#fafafa;border-left:4px solid var(--brand);
-  padding:12px 14px;border-radius:12px;margin:0 0 12px
-}
+.statement-card.pro{position:relative;background:#fff;border:1px solid #eee;border-radius:18px;padding:22px;box-shadow:var(--shadow)}
+.statement-card.pro blockquote{font-size:1.15rem;font-weight:700;background:#fafafa;border-left:4px solid var(--brand);padding:12px 14px;border-radius:12px;margin:0 0 12px}
 .statement-card .signature{margin-top:14px;font-weight:800}
 
 /* tiny accent line */
-.accent-bar{
-  position:absolute;inset:0 auto auto 0;height:4px;width:120px;border-radius:8px;
-  background:linear-gradient(90deg,var(--brand),var(--accent))
-}
+.accent-bar{position:absolute;inset:0 auto auto 0;height:4px;width:120px;border-radius:8px;background:linear-gradient(90deg,var(--brand),var(--accent))}
 
 /* responsive */
 @media (max-width:900px){ .about-intro-grid{grid-template-columns:1fr} }
