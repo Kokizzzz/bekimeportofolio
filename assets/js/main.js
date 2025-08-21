@@ -110,6 +110,11 @@ const TRANSLATIONS = {
     'membership.plus_f3': 'Kündbar monatlich',
     'membership.pay_note': 'Zahlung per Rechnung, bar oder Online-Payment (z. B. Stripe) möglich. Ermäßigungen für Alleinerziehende auf Anfrage.',
 
+
+
+ 'about.title': 'Über mich',
+
+
     // COMPARISON
     'compare.title': 'Vergleich',
     'compare.h.service': 'Leistung',
@@ -335,6 +340,12 @@ const TRANSLATIONS = {
     'form.message':'Message',
     'form.submit':'Send',
     'form.note':'By submitting you agree to the processing of your data for the purpose of contacting you.',
+
+
+
+
+'about.title': 'About',
+
 
     // MEMBERSHIPS
     'memberships.title': 'Bundles & Monthly Care',
