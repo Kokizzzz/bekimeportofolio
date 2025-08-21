@@ -1,4 +1,6 @@
+// ===============================
 // Language dictionary (DE default)
+// ===============================
 const TRANSLATIONS = {
   de: {
     // META / BRAND
@@ -120,64 +122,77 @@ const TRANSLATIONS = {
     'compare.r.priority': 'Terminpriorität',
     'compare.r.whatsapp': 'WhatsApp-Support',
     'compare.r.evening': 'Abend-Check-in',
-    // About page — extended
-'about.tagline':'Hebamme & Familienbetreuung – ruhig, respektvoll, verlässlich.',
-'about.summary_t':'Hallo, ich bin Bekime.',
-'about.summary_p1':'Ich bin ausgebildete Hebamme und habe während meiner Ausbildung auf Level-1 Stationen über 300 Geburten begleitet. Auch bei herausfordernden Situationen bleibe ich ruhig – diese Ruhe hilft Eltern, sich sicher zu fühlen.',
-'about.summary_p2':'Früher war ich u. a. für die tägliche Basisversorgung zuständig (Vitalzeichen, Untersuchungen). Heute unterstütze ich Familien mit einfühlsamen Hausbesuchen rund um Schwangerschaft, Wochenbett, Stillen und Babypflege.',
-'about.fact_births_n':'300+','about.fact_births_t':'Geburten begleitet',
-'about.fact_langs_n':'3','about.fact_langs_t':'Sprachen (DE/EN/AL)',
-'about.fact_style_n':'100%','about.fact_style_t':'Ruhig & zuverlässig',
 
-'about.help_t':'Wobei ich helfe',
-'about.help_1':'Schwangerenbetreuung & Geburtsvorbereitung',
-'about.help_2':'Wochenbettpflege & Erholung',
-'about.help_3':'Stillen & Ernährung (auch Fläschchen)',
-'about.help_4':'Babypflege, Baden, Tragen, Beruhigung',
-'about.help_5':'Alltag strukturieren & Schlafroutinen',
+    // About (extended + “only” section)
+    'about.tagline':'Hebamme & Familienbetreuung – ruhig, respektvoll, verlässlich.',
+    'about.summary_t':'Hallo, ich bin Bekime.',
+    'about.summary_p1':'Ich bin ausgebildete Hebamme und habe während meiner Ausbildung auf Level-1 Stationen über 300 Geburten begleitet. Auch bei herausfordernden Situationen bleibe ich ruhig – diese Ruhe hilft Eltern, sich sicher zu fühlen.',
+    'about.summary_p2':'Früher war ich u. a. für die tägliche Basisversorgung zuständig (Vitalzeichen, Untersuchungen). Heute unterstütze ich Familien mit einfühlsamen Hausbesuchen rund um Schwangerschaft, Wochenbett, Stillen und Babypflege.',
+    'about.fact_births_n':'300+','about.fact_births_t':'Geburten begleitet',
+    'about.fact_langs_n':'3','about.fact_langs_t':'Sprachen (DE/EN/AL)',
+    'about.fact_style_n':'100%','about.fact_style_t':'Ruhig & zuverlässig',
 
-'about.qual_t':'Qualifikation & Ausbildung',
-'about.edu_midwife_t':'Ausbildung zur Hebamme',
-'about.edu_midwife_d':'Staatlich geprüft (Tetovo, MK)',
-'about.edu_bio_t':'Bachelor Biologie (Nebenfach Biochemie)',
-'about.edu_bio_d':'Abschluss in den USA',
-'about.edu_nursing_t':'Studium Krankenpflege',
-'about.edu_nursing_d':'Bachelor in Nursing (USA)',
-'about.edu_lang_t':'Sprachkompetenz',
-'about.edu_lang_d':'Deutsch (C1), Englisch (fließend), Albanisch (Muttersprache)',
+    'about.help_t':'Wobei ich helfe',
+    'about.help_1':'Schwangerenbetreuung & Geburtsvorbereitung',
+    'about.help_2':'Wochenbettpflege & Erholung',
+    'about.help_3':'Stillen & Ernährung (auch Fläschchen)',
+    'about.help_4':'Babypflege, Baden, Tragen, Beruhigung',
+    'about.help_5':'Alltag strukturieren & Schlafroutinen',
 
-'about.exp_t':'Erfahrung (Auswahl)',
-'about.exp_mid_assist_t':'Hebammenassistenz',
-'about.exp_mid_assist_d':'Begleitung im Kreißsaal, Wochenbettstation, Elternanleitung',
-'about.exp_onco_t':'Pflegehilfe (Onkologie)',
-'about.exp_onco_d':'Einfühlsame Versorgung, Vitalzeichen, Basisaufgaben',
-'about.exp_care_t':'Pflegehilfe',
-'about.exp_care_d':'Unterstützung im Stationsalltag, Teamarbeit',
-'about.exp_note':'Hinweis: Aus Gründen der Übersicht sind Arbeitgebernamen hier weggelassen.',
+    'about.qual_t':'Qualifikation & Ausbildung',
+    'about.edu_midwife_t':'Ausbildung zur Hebamme',
+    'about.edu_midwife_d':'Staatlich geprüft (Tetovo, MK)',
+    'about.edu_bio_t':'Bachelor Biologie (Nebenfach Biochemie)',
+    'about.edu_bio_d':'Abschluss in den USA',
+    'about.edu_nursing_t':'Studium Krankenpflege',
+    'about.edu_nursing_d':'Bachelor in Nursing (USA)',
+    'about.edu_lang_t':'Sprachkompetenz',
+    'about.edu_lang_d':'Deutsch (C1), Englisch (fließend), Albanisch (Muttersprache)',
 
-'about.extra_t':'Sprachen & Einsatzgebiet',
-'about.langs_badge':'DE (C1) · EN (fließend) · AL (Muttersprache)',
-'about.area_badge':'Einsatzgebiet: Struga & Umgebung',
+    'about.exp_t':'Erfahrung (Auswahl)',
+    'about.exp_mid_assist_t':'Hebammenassistenz',
+    'about.exp_mid_assist_d':'Begleitung im Kreißsaal, Wochenbettstation, Elternanleitung',
+    'about.exp_onco_t':'Pflegehilfe (Onkologie)',
+    'about.exp_onco_d':'Einfühlsame Versorgung, Vitalzeichen, Basisaufgaben',
+    'about.exp_care_t':'Pflegehilfe',
+    'about.exp_care_d':'Unterstützung im Stationsalltag, Teamarbeit',
+    'about.exp_note':'Hinweis: Aus Gründen der Übersicht sind Arbeitgebernamen hier weggelassen.',
 
-'about.cta_t':'Lassen Sie uns sprechen.',
-'about.cta_btn':'Unverbindliches Erstgespräch',
-'about.only.lead':'Man sagt, dass Essen den Körper, Wissenschaft den Geist und Liebe die Seele nährt.',
-'about.only.p1':'Diese Zusammenhänge spielen eine wichtige Rolle bei der Geburt und im weiteren Leben. Daher sind sie mir ein Leitbild.',
-'about.only.p2':'Ich bin ausgebildete Hebamme und habe während meiner Ausbildung (Level 1) gemeinsam mit Hebammen und Ärzt*innen über 300 Geburten begleitet. In diesem Rahmen konnte ich viel Erfahrung im Umgang mit Geburtskomplikationen sammeln. Selbst bei schwierigen Situationen bleibe ich ruhig – diese Ruhe überträgt sich auf die werdenden Mütter.',
-'about.only.p3':'Bereits früh war ich für die tägliche medizinische Grundversorgung sowie für Vorsorge, Geburt und Nachsorge verantwortlich.',
-'about.only.p4':'Ich arbeite flexibel, konzentriert, liebevoll und fleißig – zukunftsorientiert und verantwortungsvoll. Mit Herz, mit Blick für das Ganze und mit der Bereitschaft, Verantwortung zu übernehmen. Gleichzeitig bringe ich die nötige emotionale Intelligenz mit, um mich gut in Teams einzufügen und Ihnen in Schwangerschaft und Wochenbett Stabilität zu geben.',
-'about.only.p5':'Wenn ich Ihr Interesse geweckt habe, freue ich mich auf Ihre Nachricht.',
-'about.only.sign':'Eure Hebamme<br/>Bekime Elezi',
+    'about.extra_t':'Sprachen & Einsatzgebiet',
+    'about.langs_badge':'DE (C1) · EN (fließend) · AL (Muttersprache)',
+    'about.area_badge':'Einsatzgebiet: Struga & Umgebung',
 
+    'about.cta_t':'Lassen Sie uns sprechen.',
+    'about.cta_btn':'Unverbindliches Erstgespräch',
 
-'contact.email':'E-Mail:',
-'contact.wa_t':'WhatsApp',
-'contact.wa_prefer':'Am liebsten über WhatsApp – schnell und unkompliziert.',
-'contact.wa_prefer_inline':'Oder schneller über WhatsApp:',
-'contact.wa_hours':'Antwortzeiten: Mo–Fr 9–17 Uhr',
-'btn.whatsapp':'WhatsApp-Chat starten',
-'btn.whatsapp_short':'WhatsApp',
-'contact.wa_prefill':'Hallo Bekime, ich hätte gern eine Beratung bzw. einen Termin. 😊',
+    // “Only” text block (About page)
+    'about.only.lead':'Man sagt, dass Essen den Körper, Wissenschaft den Geist und Liebe die Seele nährt.',
+    'about.only.p1':'Diese Zusammenhänge spielen eine wichtige Rolle bei der Geburt und im weiteren Leben. Daher sind sie mir ein Leitbild.',
+    'about.only.p2':'Ich bin ausgebildete Hebamme und habe während meiner Ausbildung (Level 1) gemeinsam mit Hebammen und Ärzt*innen über 300 Geburten begleitet. In diesem Rahmen konnte ich viel Erfahrung im Umgang mit Geburtskomplikationen sammeln. Selbst bei schwierigen Situationen bleibe ich ruhig – diese Ruhe überträgt sich auf die werdenden Mütter.',
+    'about.only.p3':'Bereits früh war ich für die tägliche medizinische Grundversorgung sowie für Vorsorge, Geburt und Nachsorge verantwortlich.',
+    'about.only.p4':'Ich arbeite flexibel, konzentriert, liebevoll und fleißig – zukunftsorientiert und verantwortungsvoll. Mit Herz, mit Blick für das Ganze und mit der Bereitschaft, Verantwortung zu übernehmen. Gleichzeitig bringe ich die nötige emotionale Intelligenz mit, um mich gut in Teams einzufügen und Ihnen in Schwangerschaft und Wochenbett Stabilität zu geben.',
+    'about.only.p5':'Wenn ich Ihr Interesse geweckt habe, freue ich mich auf Ihre Nachricht.',
+    'about.only.sign':'Eure Hebamme<br/>Bekime Elezi',
+
+    // CONTACT / FORM / WHATSAPP
+    'contact.title':'Kontakt',
+    'contact.intro':'Schreiben Sie mir – ich melde mich zeitnah.',
+    'contact.aside_t':'Schneller Draht',
+    'contact.phone':'Telefon:',
+    'contact.email':'E-Mail:',
+    'contact.hours_t':'Zeiten',
+    'contact.hours_d':'Mo–Fr 9–17 Uhr • Termine nach Vereinbarung',
+    'contact.wa_t':'WhatsApp',
+    'contact.wa_prefer':'Am liebsten über WhatsApp – schnell und unkompliziert.',
+    'contact.wa_prefer_inline':'Oder schneller über WhatsApp:',
+    'contact.wa_hours':'Antwortzeiten: Mo–Fr 9–17 Uhr',
+    'contact.wa_prefill':'Hallo Bekime, ich hätte gern eine Beratung bzw. einen Termin. 😊',
+    'footer.cta':'Kontakt',
+    'form.name':'Name',
+    'form.email':'E-Mail',
+    'form.message':'Nachricht',
+    'form.submit':'Senden',
+    'form.note':'Mit dem Absenden stimmen Sie der Verarbeitung Ihrer Angaben zum Zweck der Kontaktaufnahme zu.',
 
     // PROCESS
     'process.title': 'So läuft’s',
@@ -247,14 +262,6 @@ const TRANSLATIONS = {
     'home.gallery_d': 'Add 3–6 bright, natural photos here (newborns, hands, cuddles).',
     'home.cta_wide_t': 'Ready for a quick chat?',
     'home.cta_wide_btn': 'Request an appointment',
-'contact.email':'Email:',
-'contact.wa_t':'WhatsApp',
-'contact.wa_prefer':'Prefer WhatsApp — quick and easy.',
-'contact.wa_prefer_inline':'Or faster via WhatsApp:',
-'contact.wa_hours':'Response: Mon–Fri 9am–5pm',
-'btn.whatsapp':'Start WhatsApp chat',
-'btn.whatsapp_short':'WhatsApp',
-'contact.wa_prefill':'Hi Bekime, I’d like some support / to book a visit. 😊',
 
     // SERVICES (base)
     'services.title': 'Services',
@@ -262,7 +269,7 @@ const TRANSLATIONS = {
     'services.preg_title': 'Antenatal Support',
     'services.preg_desc': 'Education, wellbeing, birth preparation — a calmer pregnancy.',
     'services.post_title': 'Postpartum Care',
-    'services.post_desc': 'Recovery, routines, rest, sleep — I\'m by your side.',
+    'services.post_desc': 'Recovery, routines, rest, sleep — I’m by your side.',
     'services.baby_title': 'Baby Care & Soothing',
     'services.baby_desc': 'Safe bathing, changing, carrying, soothing routines — loving & competent.',
     'services.lact_title': 'Lactation/Nutrition',
@@ -300,14 +307,34 @@ const TRANSLATIONS = {
     'pricing.night_f3': 'Extendable on request',
     'pricing.note_ext': 'Note: No medical treatment. In case of complications, please contact a doctor or midwife.',
 
-'about.only.lead':'They say food nourishes the body, science the mind, and love the soul.',
-'about.only.p1':'These connections matter greatly during birth and throughout life; they are my guiding principle.',
-'about.only.p2':'I am a trained midwife and, during my Level 1 training, assisted alongside midwives and physicians at over 300 births. In that time I gained extensive experience with complications. Even in difficult situations I remain calm — calm that reassures expectant mothers.',
-'about.only.p3':'Early on I was responsible for daily basic medical care as well as antenatal care, birth and postpartum support.',
-'about.only.p4':'I work flexibly, with focus, warmth and diligence — forward-looking and responsible. With heart, with an eye for the whole, and with a willingness to take responsibility. I also bring the emotional intelligence to integrate well in teams and to provide stability during pregnancy and the postpartum period.',
-'about.only.p5':'If I have sparked your interest, I look forward to hearing from you.',
-'about.only.sign':'Your midwife<br/>Bekime Elezi',
+    // About — improved “only” translation (your text)
+    'about.only.lead':'It is said that food nourishes the body, science nourishes the mind and love nourishes the soul.',
+    'about.only.p1':'These connections play an important role at birth and throughout life. That is why they are my life guiding principles.',
+    'about.only.p2':'I am a trained midwife and assisted the midwives and doctors during my training (Level 1) in over 300 births. In this context, I also gained extensive experience dealing with birth complications. I remain calm even in difficult situations — calm that reassures expectant mothers.',
+    'about.only.p3':'Early on, I was responsible for daily basic medical care as well as prenatal, labor and postpartum care.',
+    'about.only.p4':'I am flexible, focused, caring and hard-working — future-oriented and responsible. With heart and an eye for the big picture. I also bring the emotional intelligence to fit well into teams and to add stability during pregnancy and postpartum care.',
+    'about.only.p5':'If I have awakened your interest, I would be delighted to hear from you.',
+    'about.only.sign':'Your midwife<br/>Bekime Elezi',
 
+    // CONTACT / FORM / WHATSAPP
+    'contact.title':'Contact',
+    'contact.intro':'Send me a message — I’ll reply shortly.',
+    'contact.aside_t':'Quick line',
+    'contact.phone':'Phone:',
+    'contact.email':'Email:',
+    'contact.hours_t':'Hours',
+    'contact.hours_d':'Mon–Fri 9am–5pm • By appointment',
+    'contact.wa_t':'WhatsApp',
+    'contact.wa_prefer':'Prefer WhatsApp — quick and easy.',
+    'contact.wa_prefer_inline':'Or faster via WhatsApp:',
+    'contact.wa_hours':'Response: Mon–Fri 9am–5pm',
+    'contact.wa_prefill':'Hi Bekime, I’d like some support / to book a visit. 😊',
+    'footer.cta':'Contact',
+    'form.name':'Name',
+    'form.email':'Email',
+    'form.message':'Message',
+    'form.submit':'Send',
+    'form.note':'By submitting you agree to the processing of your data for the purpose of contacting you.',
 
     // MEMBERSHIPS
     'memberships.title': 'Bundles & Monthly Care',
@@ -338,8 +365,6 @@ const TRANSLATIONS = {
     'membership.plus_f3': 'Cancel monthly',
     'membership.pay_note': 'Pay by invoice, cash or online (e.g., Stripe). Reductions for single parents on request.',
 
-    
-
     // COMPARISON
     'compare.title': 'Comparison',
     'compare.h.service': 'Service',
@@ -356,7 +381,7 @@ const TRANSLATIONS = {
     // PROCESS
     'process.title': 'How it works',
     'process.s1_t': 'Contact',
-    'process.s1_d': 'Send a short request — I\'ll reply shortly.',
+    'process.s1_d': 'Send a short request — I’ll reply shortly.',
     'process.s2_t': 'Intro call',
     'process.s2_d': '30–45 min to get to know each other and clarify needs.',
     'process.s3_t': 'Plan',
@@ -388,16 +413,17 @@ const TRANSLATIONS = {
   }
 };
 
-/* ===== keep your existing TRANSLATIONS object above this line ===== */
+// ===============================
+// Helpers
+// ===============================
 
-/* Build WhatsApp URLs using the current language's prefilled text */
+// Build WhatsApp URLs using the current language's prefilled text
 function updateWhatsAppLinks(lang){
-  const dict = (typeof TRANSLATIONS !== 'undefined' && TRANSLATIONS[lang]) ? TRANSLATIONS[lang] : {};
+  const dict = TRANSLATIONS[lang] || TRANSLATIONS.de;
   const msg = dict['contact.wa_prefill'] || '';
   document.querySelectorAll('a.js-wa').forEach(a=>{
-    const raw = a.getAttribute('data-phone') || '';
-    const phone = raw.replace(/[^\d]/g,''); // digits only for wa.me
-    if (!phone) return;
+    const phone = (a.getAttribute('data-phone') || '').replace(/[^\d]/g,''); // digits only
+    if(!phone) return;
     const url = 'https://wa.me/' + phone + (msg ? ('?text=' + encodeURIComponent(msg)) : '');
     a.setAttribute('href', url);
   });
@@ -405,7 +431,7 @@ function updateWhatsAppLinks(lang){
 
 // Apply translations to all [data-i18n] nodes (+ meta/title tags)
 function applyTranslations(lang) {
-  const dict = (typeof TRANSLATIONS !== 'undefined' && TRANSLATIONS[lang]) ? TRANSLATIONS[lang] : TRANSLATIONS.de;
+  const dict = TRANSLATIONS[lang] || TRANSLATIONS.de;
   document.documentElement.lang = lang;
   document.documentElement.setAttribute('data-lang', lang);
 
@@ -415,20 +441,21 @@ function applyTranslations(lang) {
 
     const tag = el.tagName.toLowerCase();
     if (tag === 'meta') {
-      // <meta data-i18n="meta.description" name="description">
-      el.setAttribute('content', dict[key]);
+      el.setAttribute('content', dict[key]); // <meta ... data-i18n="meta.description">
     } else if (tag === 'title') {
-      // <title data-i18n="meta.title_about">...</title>
       el.textContent = dict[key];
-      // also ensure the browser tab updates (some browsers rely on document.title)
-      document.title = dict[key];
+      document.title = dict[key]; // ensure browser tab updates
     } else {
-      el.textContent = dict[key];
+      // allow simple inline markup (e.g., <br/>) in some strings
+      if (/[<>&]/.test(dict[key]) || el.hasAttribute('data-i18n-html')) {
+        el.innerHTML = dict[key];
+      } else {
+        el.textContent = dict[key];
+      }
     }
   });
 
   // Toggle button active state + aria-pressed
-  const isDE = lang === 'de';
   const deBtn = document.getElementById('langDe');
   const enBtn = document.getElementById('langEn');
   [deBtn, enBtn].forEach(btn => {
@@ -436,7 +463,7 @@ function applyTranslations(lang) {
     btn.classList.remove('active');
     btn.setAttribute('aria-pressed', 'false');
   });
-  const target = isDE ? deBtn : enBtn;
+  const target = (lang === 'de') ? deBtn : enBtn;
   if (target) {
     target.classList.add('active');
     target.setAttribute('aria-pressed', 'true');
@@ -450,9 +477,8 @@ function applyTranslations(lang) {
 }
 
 function setupLangSwitch() {
-  const saved = (()=>{
-    try { return localStorage.getItem('lang') || 'de'; } catch(_) { return 'de'; }
-  })();
+  let saved = 'de';
+  try { saved = localStorage.getItem('lang') || 'de'; } catch(_) {}
   applyTranslations(saved);
 
   const de = document.getElementById('langDe');
@@ -486,65 +512,10 @@ function setupFAQ() {
   });
 }
 
-document.addEve
-
-
-  // toggle active state
-  document.querySelectorAll('#langDe, #langEn').forEach(btn => btn.classList.remove('active'));
-  const target = document.getElementById(lang === 'de' ? 'langDe' : 'langEn');
-  if (target) target.classList.add('active');
-
-  localStorage.setItem('lang', lang);
-
-
-function setupLangSwitch() {
-  const saved = localStorage.getItem('lang') || 'de';
-  applyTranslations(saved);
-
-  const de = document.getElementById('langDe');
-  const en = document.getElementById('langEn');
-  if (de) de.addEventListener('click', () => applyTranslations('de'));
-  if (en) en.addEventListener('click', () => applyTranslations('en'));
-}
-
-function setupNav() {
-  const toggle = document.getElementById('navToggle');
-  const list = document.querySelector('.nav-list');
-  if (!toggle || !list) return;
-  toggle.addEventListener('click', () => {
-    const open = list.classList.toggle('show');
-    toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
-  });
-}
-
-function setYear() {
-  const y = document.getElementById('year');
-  if (y) y.textContent = new Date().getFullYear();
-}
-
-// FAQ accordion
-function setupFAQ() {
-  document.querySelectorAll('.acc-item .acc-btn').forEach(btn => {
-    btn.addEventListener('click', () => {
-      const item = btn.closest('.acc-item');
-      if (item) item.classList.toggle('open');
-    });
-  });
-}
-
+// Boot
 document.addEventListener('DOMContentLoaded', () => {
   setupLangSwitch();
   setupNav();
   setYear();
   setupFAQ();
 });
-function updateWhatsAppLinks(lang){
-  const dict = TRANSLATIONS[lang] || TRANSLATIONS.de;
-  const msg = dict['contact.wa_prefill'] || '';
-  document.querySelectorAll('a.js-wa').forEach(a=>{
-    const phone = (a.getAttribute('data-phone') || '').replace(/[^\d]/g,''); // keep digits only
-    if(!phone) return;
-    const url = 'https://wa.me/' + phone + (msg ? ('?text=' + encodeURIComponent(msg)) : '');
-    a.setAttribute('href', url);
-  });
-}
